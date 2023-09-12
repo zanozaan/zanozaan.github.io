@@ -14,24 +14,26 @@
     <title>Portfolio Fauzan</title>
   </head>
   <body>
+    <nav>
+      <div class="logo">
+        <a href="#"><img src="./assets/logo.png" alt="logo" /></a>
+      </div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#job-experience">Job Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
     <div class="container">
-      <header>
-        <div class="header-container">
-          <div class="logo">
-            <a href="#"><img src="./assets/logo.png" alt="logo" /></a>
-          </div>
-          <nav>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#education">Education</a></li>
-              <li><a href="#job-experience">Job Experience</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
       <div id="home">
         <div class="name">
           <p>Web Developer</p>
@@ -309,5 +311,14 @@
         </p>
       </footer>
     </div>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle input");
+      const nav = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("slide");
+      });
+    </script>
   </body>
 </html>
