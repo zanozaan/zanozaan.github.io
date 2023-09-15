@@ -36,15 +36,18 @@ nav {
   display: flex;
   background-color: #e0e0e0;
   justify-content: space-around;
-  height: auto;
   align-items: center;
   color: #838383;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 nav .logo img {
-  width: auto;
-  margin: 5px 0;
   height: 60px;
+  margin: 0.5rem 0;
 }
 
 nav ul {
@@ -52,6 +55,8 @@ nav ul {
   list-style: none;
   width: 50%;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
@@ -71,6 +76,7 @@ nav ul li a:hover {
   justify-content: space-between;
   position: relative;
   display: none;
+  z-index: 999;
 }
 
 .menu-toggle input {
@@ -146,7 +152,7 @@ nav ul li a:hover {
 /* RESPONSIVE NAVBAR START */
 
 /* TABLET */
-@media screen and (min-width: 600px) and (max-width: 810px) {
+@media screen and (min-width: 600px) and (max-width: 840px) {
   nav ul {
     width: 70%;
   }
@@ -160,23 +166,15 @@ nav ul li a:hover {
     top: 0;
     right: 0;
     width: 50%;
-    height: 90vh;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     background-color: #ccc;
-    z-index: -1;
+    z-index: 998;
     transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    -o-transform: translateX(100%);
-    transition: all 1s;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -ms-transition: all 1s;
-    -o-transition: all 1s;
     opacity: 0;
+    transition: all 1s;
   }
 
   nav ul.slide {
@@ -199,8 +197,9 @@ nav ul li a:hover {
 
 /* PROFILE START */
 #home {
-  width: auto;
-  padding: 6% 0;
+  margin-top: 100px;
+  height: 70vh;
+  padding: 5% 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -219,6 +218,28 @@ nav ul li a:hover {
 .name span {
   color: crimson;
 }
+
+/* RESPONSIVE PROFILE START */
+@media screen and (max-width: 810px) {
+  #home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
+
+  .profile-photo {
+    order: 1;
+    margin-bottom: 1rem;
+  }
+
+  .name,
+  .profile-photo {
+    padding: 1rem;
+    margin: auto;
+  }
+}
+/* RESPONSIVE PROFILE END */
 /* PROFILE END*/
 
 /* ABOUT ME START */
@@ -289,6 +310,39 @@ button:active {
   background-color: white;
   color: black;
 }
+
+/* RESPONSIVE ABOUT ME START */
+@media screen and (max-width: 810px) {
+  #about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-photo {
+    order: 1;
+  }
+
+  .about-myself {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .card-achieve img {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+
+/* RESPONSIVE ABOUT ME END */
 /* ABOUT ME END */
 
 /* SKILLS START*/
